@@ -4,16 +4,19 @@ import {repository} from './../repository/repository.js'
 const host = 'localhost'; 
 const port = 8000; 
 
+// General resp of URL is not found or instance not found.
 const notFound = (res) => {
     res.writeHead(404); 
     res.end(JSON.stringify({error:"Resource not found"})); 
 }
 
+// Response for invalid requests (objects).
 const notValid = (res) => {
     res.writeHead(400); 
     res.end(JSON.stringify({error:"User not valid"})); 
 }
 
+// Sub-URLs with ID.
 const processById = (id, req, res) => {
     if (req.method === 'GET') {
 
@@ -63,8 +66,6 @@ const processById = (id, req, res) => {
         return;
     }
 }
-
-
 
 const start_server_impl = async () => {
     const requestListener = function (req, res) { 
@@ -120,10 +121,8 @@ const start_server_impl = async () => {
                 {
                     notFound(res);
                     break
-                }
-                    
+                }          
         } 
-
     };
 
     const server = http.createServer(requestListener); 
