@@ -1,6 +1,5 @@
 import * as http from 'http';
 import {repository} from './../repository/repository.js'
-import * as qs from 'querystring';
 
 const host = 'localhost'; 
 const port = 8000; 
