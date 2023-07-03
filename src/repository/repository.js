@@ -6,16 +6,19 @@ function uuidv4() {
     );
   }
 
+  // General Store.
 class Repository {    
 
     constructor() {
         this.users = [];
     }
 
+    // Get all of users.
     getAllUsers() {
         return this.users;
     }
 
+    // Get oly one.
     getByID(id) {
         let found = null;
         for (const u of this.users) { 
@@ -27,6 +30,7 @@ class Repository {
         return found;
     }
 
+    // Delete one by id.
     deleteByID(id) {
         let result = [];
         for (const u of this.users) { 
@@ -38,6 +42,7 @@ class Repository {
         this.users = result;
     }
 
+    // update or add if not exists.
     tryToUpdateUser(id, data) {
 
         let found = null;
@@ -79,6 +84,7 @@ class Repository {
         else return null;
     }
 
+    // Add as a POST.
     tryToAddUser(data) {
         data = JSON.parse(data);
         if (data === null)
