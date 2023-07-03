@@ -8,7 +8,8 @@
     "start:dev": "node src/server/dev.js"
   },
   "keywords": [
-    "nodejs"
+    "nodejs",
+    "crud-api"
   ],
   "author": "bsivko",
   "license": "ISC"

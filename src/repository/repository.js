@@ -84,7 +84,8 @@ class Repository {
         else return null;
     }
 
-    // Add as a POST.
+    // Add as a POST. 
+    // Returns null of not validated.
     tryToAddUser(data) {
         data = JSON.parse(data);
         if (data === null)
@@ -111,8 +112,6 @@ class Repository {
         }
         else return null;
     }
-
-    
 }  
 
  const repository = new Repository();

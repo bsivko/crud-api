@@ -18,12 +18,11 @@ GET all example:
 POST to add user example:
 
 `curl -X POST http://localhost:8000/api/users -H "Content-Type: application/json" -d '{"age": 123456, "username": "12", "hobbies": ["hiking", "pissing"]}' `
-
 GET by ID example:
 
 `curl -X GET http://localhost:8000/api/users/dc3e7596-c329-43dc-b8e9-e908f313eb6d -H "Content-Type: application/json" `
 
-PUT by ID example:
+PUT by ID example (adds one if does not exists or overwrites if exists):
 
 `curl -X PUT http://localhost:8000/api/users/68790ecb-c8cd-493e-bb4e-0cf346ac64d4 -H "Content-Type: application/json" -d '{"age": 126, "username": "asd", "hobbies": []}'`
 
